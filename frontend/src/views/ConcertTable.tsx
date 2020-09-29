@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { RouteProps } from 'react-router-dom'
-import { v4 as uuid } from 'uuid'
+// import { v4 as uuid } from 'uuid'
 
 import client from '../client/index'
 
@@ -44,7 +44,7 @@ const ConcertTable = ({ routeProps }: Props) => {
                 </thead>
                 <tbody>
                   {concerts.map(concert => (
-                    <tr key={uuid()}>
+                    <tr key={concert.id}>
                       <td>{concert.artist}</td>
                       <td>{concert.location}</td>
                       <td>{concert.date}</td>

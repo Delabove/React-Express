@@ -15,7 +15,7 @@ const Router = () => {
           <Switch>
             <Route path='/table' render={(routeProps: RouteProps) => <ConcertTable routeProps={routeProps} />} />
             <Route path='/' component={Landing} />
-            <Redirect from='/' to='/' />
+            {/* <Redirect from='/' to='/' /> */}
           </Switch>
         </main>
       </Suspense>
