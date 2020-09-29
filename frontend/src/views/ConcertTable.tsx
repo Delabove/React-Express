@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 import client from '../client/index'
 
-import { Concert } from '../interfaces/concert'
+import { Concert } from '../interfaces/concerts'
 
 import styles from '../styles/concert-table.module.css'
 
@@ -37,10 +37,9 @@ const ConcertTable = ({ routeProps }: Props) => {
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Title</th>
                     <th>Artist</th>
-                    <th>Album</th>
-                    <th>Genre</th>
+                    <th>Location</th>
+                    <th>Date</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -59,7 +58,7 @@ const ConcertTable = ({ routeProps }: Props) => {
         interface Props {
             routeProps: RouteProps
           }
-          interface ConcertApiResponse {
+        interface ConcertApiResponse {
             data: Concert[]
           }
 
