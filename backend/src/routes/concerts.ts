@@ -2,7 +2,7 @@ import { Express } from 'express'
 import fetchConcertList from '../helpers/fetchConcertList'
 
 const routeHandler = (app: Express): void => {
-    app.get('/concerts', (req, res) => {
+    app.get('/', (req, res) => {
       fetchConcertList(req, res)
     })
 
