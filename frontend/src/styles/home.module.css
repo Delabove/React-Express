@@ -38,32 +38,51 @@
         margin-top: 190px;
     }
 
+  .nested_grid{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        /* background-color: coral; */
 
-    @media only screen and (max-width: 768px) {
+
+    }
+    .nested_grid_image{
+        width: 20%;
+        margin: 10px;
+    }
+
+
+    @media only screen and (min-width: 500px) and (max-width: 899px){
         .button_container{
-            margin-top: 270px;
+
+            margin-top: 317px;
         }
 
         .viewConcertBtn{
 
-            font-size: 18px;
-            padding: 14px;
+            font-size: 17px;
+            padding: 10px;
+        }
+
+        .nested_grid_image{
+            width: 24%;
+            margin: 1px;
         }
       }
 
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (min-width: 900px) and (max-width:1400px) {
         .button_container{
-            margin-top: 390px;
+            margin-top: 395px;
         }
 
         .viewConcertBtn{
 
-            font-size: 28px;
+            font-size: 21px;
             padding: 20px;
         }
         }
 
-      @media only screen and (max-width: 1440px) {
+      @media only screen and (min-width: 1440px) and (max-width:1900px) {
 
         .button_container{
             margin-top: 336px;
@@ -73,6 +92,10 @@
 
             font-size: 19px;
             padding: 17px;
+        }
+        .nested_grid_image{
+            width: 23%;
+            margin: 10px;
         }
 
       }
