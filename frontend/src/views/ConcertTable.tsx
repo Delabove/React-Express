@@ -4,6 +4,8 @@ import { v4 as uuid } from 'uuid'
 
 import client from '../client/index'
 
+import { Concert } from '../interfaces/concert'
+
 import styles from '../styles/concert-table.module.css'
 
 const ConcertTable = ({ routeProps }: Props) => {
@@ -12,14 +14,14 @@ const ConcertTable = ({ routeProps }: Props) => {
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
 
-        const fetchSongs = async (): Promise<void> => {
+        const fetchConcerts = async (): Promise<void> => {
             try {
               const { data } = (await client.get('/concerts')) as ConcertApiResponse
-              // update the state with the result of the API call.
+
               setConcerts(data)
             } catch (error) {
               console.error('error', error)
-              // something went wrong with the request. Show the error page, or something.
+
             } finally {
               setIsLoading(false)
             }
@@ -31,7 +33,7 @@ const ConcertTable = ({ routeProps }: Props) => {
             <h1>Loading..</h1>
           ) : (
             <>
-              <h1>Songs</h1>
+              <h1>Concert List</h1>
               <table className={styles.table}>
                 <thead>
                   <tr>
@@ -60,5 +62,5 @@ const ConcertTable = ({ routeProps }: Props) => {
           interface ConcertApiResponse {
             data: Concert[]
           }
-          
+
           export default ConcertTable
