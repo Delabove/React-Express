@@ -9,13 +9,13 @@ const ConcertTable = lazy(() => import('../views/ConcertTable'))
 const Router = () => {
   return (
     <>
-     
+
       <Suspense fallback={<div>Loading..</div>}>
         <main style={{ marginTop: '30px' }}>
           <Switch>
             <Route path='/table' render={(routeProps: RouteProps) => <ConcertTable routeProps={routeProps} />} />
             <Route path='/' component={Landing} />
-            {/* <Redirect from='/' to='/' /> */}
+            <Redirect from='/' to='/' />
           </Switch>
         </main>
       </Suspense>
