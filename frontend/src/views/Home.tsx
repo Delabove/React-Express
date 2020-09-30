@@ -34,17 +34,26 @@ const Home = ({ routeProps }: Props) => {
       }, [])
 
   return (
+
+
+
     <div className={styles.landing}>
+
        <div className={styles.MainHeader} >
           <div  className={styles.headerLogo}>
             <img className={styles.concertLogoImg} src={Image} alt="header-logo"></img>
-            </div>
-          <div className={styles.button_container}> <Link to={'/table'} className={styles.viewConcertBtn}>View Upcoming Concerts</Link>
+          </div>
+          <div className={styles.button_container}>
+            <Link to={'/table'} className={styles.viewConcertBtn}>View Upcoming Concerts</Link>
           </div>
     </div>
+    <div className={styles.sign_up_alert_btn}>
 
+    </div>
+    <div>
+       <h1 className={styles.card_section_title}>Upcoming Shows</h1>
+    </div>
     <div className={styles.Card_Container}>
-
     {concerts.slice(0, 3).map(concert => (
         <div className={styles.card} key={concert.id}>
           <div className={styles.card_header}>
@@ -54,11 +63,11 @@ const Home = ({ routeProps }: Props) => {
                       <h3>{concert.artist}</h3>
                       <h5>{concert.location}</h5>
                       <h6>{concert.date}</h6>
+                      <div className={styles.buy_Tickets_Container}></div>
                       <Link className={styles.buy_Tickets_Btn}  to={'/table'}>Buy Tickets</Link>
           </div>
         </div>
-
-))}
+        ))}
       </div>
     </div>
   )
