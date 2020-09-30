@@ -1,0 +1,36 @@
+[
+    {
+
+      "artist": "Lauren Daigle",
+      "year": "September 30, 2020",
+      "location": "Dallas, Tx"
+    },
+    {
+      "artist": "Kelly Clarkson",
+      "date": "October 5, 2020",
+      "location": "Austin, Tx"
+    },
+    {
+      "artist": "Lady Gaga",
+      "date": "November 1, 2020",
+      "location": "Houston, Tx"
+    },
+
+    {
+      "artist": "Post Malone",
+      "date": "November 15, 2020",
+      "location": "Houston, Tx"
+    },
+
+    {
+      "artist": "Halsey",
+      "date": "November 26, 2020",
+      "location": "Houston, Tx"
+    },
+
+    {
+      "artist": "Travis Scott",
+      "date": "December 10, 2020",
+      "location": "Houston, Tx"
+    }
+]
