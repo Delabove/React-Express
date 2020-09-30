@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { RouteProps } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import imageFilename from '../images/10.png'
 
-
+import Image from '../assets/Concert_Logo .png'
 import styles from '../styles/home.module.css'
-import Image from '../images/Concert_Logo .png'
 
-import RockImage from '../images/rock.png'
 import client from '../client/index'
 
 import { Concert } from '../interfaces/concerts'
@@ -57,13 +56,13 @@ const Home = ({ routeProps }: Props) => {
     {concerts.slice(0, 3).map(concert => (
         <div className={styles.card} key={concert.id}>
           <div className={styles.card_header}>
-            <img className={styles.card_image} src={RockImage} alt=""/>
+          {/* <img src={require(`../images/{imageFilename}`)} /> */}
           </div>
           <div className={styles.card_body}>
                       <h3 className={styles.card_artist}>{concert.artist}</h3>
                       <h5 className={styles.card_location}>{concert.location}</h5>
                       <h6 className={styles.card_date}>{concert.date}</h6>
-                      <div className={styles.home_card_btn_container}></div>
+                      <div className={styles.home_card_container}></div>
                       <Link className={styles.home_card_btn}  to={'/table'}>Buy Tickets</Link>
           </div>
         </div>
