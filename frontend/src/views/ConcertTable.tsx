@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { RouteProps } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Image from '../images/Concert_Logo .png'
 // import { v4 as uuid } from 'uuid'
 
 import client from '../client/index'
@@ -33,22 +35,31 @@ const ConcertTable = ({ routeProps }: Props) => {
             <h1>Loading..</h1>
           ) : (
             <>
+  <div className={styles.MainHeader} >
+          <div  className={styles.headerLogo}>
+            <img className={styles.concertLogoImg} src={Image} alt="header-logo"></img>
+          </div>
+    </div>
+
+
+
+             <h1 className={styles.table_title}>Coming Soon To a Stage Near You</h1>
             <div className={styles.table_container}>
-              {/* <h1>Concert List</h1> */}
               <table className={styles.table}>
-                <thead>
-                  <tr>
-                    <th className={styles.table_header}>Artist</th>
-                    <th className={styles.table_header}>Location</th>
-                    <th className={styles.table_header}>Date</th>
-                  </tr>
-                </thead>
+
                 <tbody>
                   {concerts.map(concert => (
                     <tr key={concert.id}>
-                      <td>{concert.artist}</td>
-                      <td>{concert.location}</td>
-                      <td>{concert.date}</td>
+                        <td>
+                        {concert.artist}
+                        </td>
+                        <td>
+                          {concert.location}
+                            <br/>
+                          {concert.date}
+                        </td>
+                      <td className={styles.table_data_date} ></td>
+                      <td><Link to={'/table'} className={styles.table_btn}>Buy Tickets</Link></td>
                     </tr>
                   ))}
                 </tbody>
