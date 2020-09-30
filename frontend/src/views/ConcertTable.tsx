@@ -16,7 +16,7 @@ const ConcertTable = ({ routeProps }: Props) => {
 
         const fetchConcerts = async (): Promise<void> => {
             try {
-              const { data } = (await client.get('/concerts')) as ConcertApiResponse
+              const { data } = (await client.get('/')) as ConcertApiResponse
 
               setConcerts(data)
             } catch (error) {
