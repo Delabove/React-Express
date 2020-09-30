@@ -33,13 +33,14 @@ const ConcertTable = ({ routeProps }: Props) => {
             <h1>Loading..</h1>
           ) : (
             <>
-              <h1>Concert List</h1>
+            <div className={styles.table_container}>
+              {/* <h1>Concert List</h1> */}
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Artist</th>
-                    <th>Location</th>
-                    <th>Date</th>
+                    <th className={styles.table_header}>Artist</th>
+                    <th className={styles.table_header}>Location</th>
+                    <th className={styles.table_header}>Date</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -52,6 +53,7 @@ const ConcertTable = ({ routeProps }: Props) => {
                   ))}
                 </tbody>
               </table>
+              </div>
             </>
           )
         }
