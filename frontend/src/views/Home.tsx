@@ -60,11 +60,11 @@ const Home = ({ routeProps }: Props) => {
             <img className={styles.card_image} src={RockImage} alt=""/>
           </div>
           <div className={styles.card_body}>
-                      <h3>{concert.artist}</h3>
-                      <h5>{concert.location}</h5>
-                      <h6>{concert.date}</h6>
-                      <div className={styles.buy_Tickets_Container}></div>
-                      <Link className={styles.buy_Tickets_Btn}  to={'/table'}>Buy Tickets</Link>
+                      <h3 className={styles.card_artist}>{concert.artist}</h3>
+                      <h5 className={styles.card_location}>{concert.location}</h5>
+                      <h6 className={styles.card_date}>{concert.date}</h6>
+                      <div className={styles.home_card_btn_container}></div>
+                      <Link className={styles.home_card_btn}  to={'/table'}>Buy Tickets</Link>
           </div>
         </div>
         ))}
