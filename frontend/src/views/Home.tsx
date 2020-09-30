@@ -45,19 +45,16 @@ const Home = ({ routeProps }: Props) => {
 
     <div className={styles.Card_Container}>
 
-    {concerts.map(concert => (
-        <div className={styles.card}>
+    {concerts.slice(0, 3).map(concert => (
+        <div className={styles.card} key={concert.id}>
           <div className={styles.card_header}>
             <img className={styles.card_image} src={RockImage} alt=""/>
           </div>
           <div className={styles.card_body}>
-
-                    <tr key={concert.id}>
-                      <td>{concert.artist}</td>
-                      <td>{concert.location}</td>
-                      <td>{concert.date}</td>
-                    </tr>
-
+                      <h3>{concert.artist}</h3>
+                      <h5>{concert.location}</h5>
+                      <h6>{concert.date}</h6>
+                      <Link className={styles.buy_Tickets_Btn}  to={'/table'}>Buy Tickets</Link>
           </div>
         </div>
 
