@@ -42,6 +42,15 @@ const ConcertTable = ({routeProps}: Props) => {
           ></img>
         </div>
       </div>
+      <div>
+        <h1>Your Artists</h1>
+        <tbody>
+          <tr className={styles.favorite_list}>
+            <td className={styles.favorite_cell}>Favorite 1 </td>
+          </tr>
+        </tbody>
+
+      </div>
 
       <h1 className={styles.table_title}>Coming Soon To a Stage Near You</h1>
       <div className={styles.table_container}>
@@ -49,16 +58,16 @@ const ConcertTable = ({routeProps}: Props) => {
           <tbody>
             {concerts.map((concert) => (
               <tr key={concert.id}>
-                <td >
-                   <div className={styles.table_artist}>{concert.artist}</div>
+                <td>
+                  <div className={styles.table_artist}>{concert.artist}</div>
                   <div className={styles.subscribe_container} >
                   <button className={styles.subscribe_btn}>Subscribe</button>
                 </div>
                 </td>
+
                 <td>
                   <div className={styles.table_location}>{concert.location}</div>
-
-                 <div className={styles.table_date}>{concert.date}</div>
+                  <div className={styles.table_date}>{concert.date}</div>
                 </td>
 
                 <td className={styles.table_btn_cell}>

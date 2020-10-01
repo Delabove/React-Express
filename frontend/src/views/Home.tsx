@@ -45,7 +45,13 @@ const Home = ({routeProps}: Props) => {
           </Link>
         </div>
       </div>
-
+      <div className={styles.search_container}>
+        <div className={styles.search_box}>Search here</div>
+        <div className={styles.search_button_container}>
+          <a href="#" className={styles.search_button}>Search</a>
+          <a href="#" className={styles.add_artist_button}>Add Artist</a>
+        </div>
+      </div>
       <div>
         <h1 className={styles.card_section_title}>Upcoming Shows</h1>
       </div>
