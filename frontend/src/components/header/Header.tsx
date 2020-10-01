@@ -10,9 +10,7 @@ import Form from '../../views/SignUp'
 const Header = () =>{
 
 
-    const [showForm, setShowForm] = useState(false)
-    const onClick = () => setShowForm(true)
-
+function
 
     return (
 
