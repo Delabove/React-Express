@@ -45,7 +45,7 @@ const Home = ({routeProps}: Props) => {
           </Link>
         </div>
       </div>
-      <div className={styles.sign_up_alert_btn}></div>
+
       <div>
         <h1 className={styles.card_section_title}>Upcoming Shows</h1>
       </div>
@@ -53,7 +53,6 @@ const Home = ({routeProps}: Props) => {
         {concerts.slice(0, 3).map((concert) => (
           <div className={styles.card} key={concert.id}>
             <div className={styles.card_header}>
-              {/* <img src={require(`../images/{imageFilename}`)} /> */}
             </div>
             <div className={styles.card_body}>
               <h3 className={styles.card_artist}>{concert.artist}</h3>

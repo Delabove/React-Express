@@ -49,13 +49,18 @@ const ConcertTable = ({routeProps}: Props) => {
           <tbody>
             {concerts.map((concert) => (
               <tr key={concert.id}>
-                <td>{concert.artist}</td>
-                <td>
-                  {concert.location}
-                  <br />
-                  {concert.date}
+                <td >
+                   <div className={styles.table_artist}>{concert.artist}</div>
+                  <div className={styles.subscribe_container} >
+                  <button className={styles.subscribe_btn}>Subscribe</button>
+                </div>
                 </td>
-                <td className={styles.table_data_date}></td>
+                <td>
+                  <div className={styles.table_location}>{concert.location}</div>
+
+                 <div className={styles.table_date}>{concert.date}</div>
+                </td>
+
                 <td className={styles.table_btn_cell}>
                   <Link to={'/table'} className={styles.table_btn}>
                     Buy Tickets

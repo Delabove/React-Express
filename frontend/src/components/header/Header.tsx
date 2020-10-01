@@ -10,15 +10,15 @@ import Form from '../../views/SignUp'
 const Header = () =>{
 
 
-function
+// function
 
     return (
 
     <div className={styles.Navbar}>
 
       <div className={styles.link_container} >
-        <a className={styles.nav_item} href={'/form'} onClick={onClick}> Sign Up</a>
-          { showForm ? <Form /> : null }
+        {/* <a className={styles.nav_item} href={'/form'} onClick={onClick}> Sign Up</a>
+          { showForm ? <Form /> : null } */}
         <a href={'/form'} className={styles.nav_item}>Log In</a>
       </div>
 
