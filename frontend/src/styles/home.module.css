@@ -36,7 +36,7 @@
     .button_container{
         display:inline-block;
         position: absolute;
-        margin-top: 310px;
+        margin-top: 400px;
     }
 
     .card_section_title{
@@ -151,7 +151,7 @@
         }
 
         .button_container{
-            margin-top: 483px;
+            margin-top: 392px;
         }
 
         .viewConcertBtn{
@@ -206,8 +206,8 @@
 
         .viewConcertBtn{
 
-            font-size: 35px;
-            padding: 34px;
+            font-size: 25px;
+            padding: 24px;
         }
         .card_image{
             width: 23%;

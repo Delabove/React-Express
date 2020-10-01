@@ -1,35 +1,36 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { RouteProps } from 'react-router-dom'
+
 import styles from './styles/header.module.css'
 import Form from '../../views/SignUp'
 
+
+
 const Header = () =>{
-    // export type EventHandlerProps = {
-    //     onClick: (e: React.MouseEvent) => void;
-    //   }
-
-    //   export function EventHandler({ onClick }: EventHandlerProps) {
-    //     // handle focus events in a separate function
-    //     function onFocus(e: React.FocusEvent) {
-    //       console.log('Focused!', e.currentTarget)
-    //     }
-   
-    return  <div className={styles.Navbar}>
-        <a href={'../../views/SignUp.tsx'} onClick={e =>{
-              alert("Link Clicked")
-
-        }}>Sign Up
-
-        </a>
-       <a href={'../../views/SignUp.tsx'}  onClick={e =>{
 
 
-        }}>Log In</a>
-    </div>
+    const [showForm, setShowForm] = useState(false)
+    const onClick = () => setShowForm(true)
 
-    
+
+    return (
+
+    <div className={styles.Navbar}>
+
+      <div className={styles.link_container} >
+        <a className={styles.nav_item} href={'/form'} onClick={onClick}> Sign Up</a>
+          { showForm ? <Form /> : null }
+        <a href={'/form'} className={styles.nav_item}>Log In</a>
+      </div>
+
+     </div>
+
+    )
+
+
+
 }
-
 
 
 export default Header

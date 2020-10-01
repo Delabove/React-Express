@@ -55,6 +55,9 @@
       text-align: left;
     }
 
+      .table_btn_cell{
+        text-align: right;
+      }
 
     tr:hover{
       background-color: rgba(233, 233, 233, 0.452);
